@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://daqxjp7cto0pc"]
+
+[ext_resource type="Texture2D" uid="uid://ba3ctuiut4adk" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/heroes/knight/knight_run_spritesheet.png" id="1_h3ybu"]
+
+[node name="Player" type="CharacterBody2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_h3ybu")
+hframes = 6
