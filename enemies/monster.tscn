@@ -1,0 +1,111 @@
+[gd_scene load_steps=17 format=3 uid="uid://cm43xdfewqlpf"]
+
+[ext_resource type="Script" path="res://enemies/monster.gd" id="1_0keml"]
+[ext_resource type="Texture2D" uid="uid://blornseq12pi" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/goblin/goblin_run_spritesheet2.png" id="1_tvrka"]
+[ext_resource type="Texture2D" uid="uid://gdhoux0ps7om" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/goblin/goblin_run_spritesheet.png" id="2_biyri"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4uen"]
+atlas = ExtResource("1_tvrka")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4e4d"]
+atlas = ExtResource("1_tvrka")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdklv"]
+atlas = ExtResource("1_tvrka")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qya7"]
+atlas = ExtResource("1_tvrka")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ci2l1"]
+atlas = ExtResource("1_tvrka")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jb5ks"]
+atlas = ExtResource("1_tvrka")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2vys"]
+atlas = ExtResource("2_biyri")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bry1t"]
+atlas = ExtResource("2_biyri")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55dni"]
+atlas = ExtResource("2_biyri")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygl1t"]
+atlas = ExtResource("2_biyri")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hoyb3"]
+atlas = ExtResource("2_biyri")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_567i4"]
+atlas = ExtResource("2_biyri")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hpnxr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4uen")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4e4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdklv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qya7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ci2l1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jb5ks")
+}],
+"loop": true,
+"name": &"walkLeft",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2vys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bry1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55dni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygl1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hoyb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_567i4")
+}],
+"loop": true,
+"name": &"walkRight",
+"speed": 10.0
+}]
+
+[node name="monster" type="CharacterBody2D"]
+script = ExtResource("1_0keml")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_hpnxr")
+animation = &"walkRight"

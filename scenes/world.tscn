@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c13p7k5jl748u"]
+[gd_scene load_steps=7 format=3 uid="uid://c13p7k5jl748u"]
 
 [ext_resource type="PackedScene" uid="uid://daqxjp7cto0pc" path="res://player/player.tscn" id="1_jhal8"]
 [ext_resource type="Texture2D" uid="uid://bi7cihpw6nteq" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/full tilemap.png" id="2_qn1c3"]
 [ext_resource type="Script" path="res://scenes/follow cam.gd" id="3_x5hee"]
+[ext_resource type="PackedScene" uid="uid://cm43xdfewqlpf" path="res://enemies/monster.tscn" id="4_o5kh1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_00gck"]
 texture = ExtResource("2_qn1c3")
@@ -190,9 +191,12 @@ layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(2228265, 327680, 0, 524346, 458752, 0, 1245252, 458752, 0, 2228285, 458752, 0, 2359303, 0, 1, 2359304, 65536, 1, 2359316, 65536, 0, 2359317, 65536, 0, 2359315, 65536, 0, 2424853, 65536, 0, 2424852, 65536, 0, 1769503, 65536, 0, 1769504, 65536, 0, 524332, 65536, 0, 655405, 65536, 0, 1966150, 327680, 1, 1507371, 327680, 1, 2490406, 196608, 4, 2555942, 196608, 4, 2621478, 196608, 4, 2621477, 131072, 6, 2621476, 131072, 6, 2687012, 65536, 7)
 
-[node name="Player" parent="." instance=ExtResource("1_jhal8")]
+[node name="Player" parent="TileMap" instance=ExtResource("1_jhal8")]
 position = Vector2(233, 145)
 
-[node name="follow cam" type="Camera2D" parent="Player" node_paths=PackedStringArray("tilemap")]
+[node name="follow cam" type="Camera2D" parent="TileMap/Player" node_paths=PackedStringArray("tilemap")]
 script = ExtResource("3_x5hee")
-tilemap = NodePath("../../TileMap")
+tilemap = NodePath("../..")
+
+[node name="monster" parent="TileMap" instance=ExtResource("4_o5kh1")]
+position = Vector2(295, 344)
