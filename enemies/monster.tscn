@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cm43xdfewqlpf"]
+[gd_scene load_steps=19 format=3 uid="uid://cm43xdfewqlpf"]
 
 [ext_resource type="Script" path="res://enemies/monster.gd" id="1_0keml"]
 [ext_resource type="Texture2D" uid="uid://blornseq12pi" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/goblin/goblin_run_spritesheet2.png" id="1_tvrka"]
@@ -101,7 +101,17 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d0htq"]
+radius = 21.0
+height = 42.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1vdkd"]
+radius = 20.0
+height = 42.0
+
 [node name="monster" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_0keml")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -109,3 +119,13 @@ position = Vector2(0, -8)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_hpnxr")
 animation = &"walkRight"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -9)
+shape = SubResource("CapsuleShape2D_d0htq")
+
+[node name="hitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitBox"]
+position = Vector2(1, -9)
+shape = SubResource("CapsuleShape2D_1vdkd")

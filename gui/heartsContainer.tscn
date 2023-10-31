@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3we4pp4suod5"]
+
+[ext_resource type="Script" path="res://gui/heartsContainer.gd" id="1_koxij"]
+
+[node name="heartsContainer" type="HBoxContainer"]
+layout_direction = 3
+script = ExtResource("1_koxij")

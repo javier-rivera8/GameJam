@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4fputwcb61em"]
+
+[ext_resource type="Script" path="res://gui/heartGui.gd" id="1_2swhh"]
+[ext_resource type="Texture2D" uid="uid://bubx0ikn6toth" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/ui (new)/Hearts/PNG/animated/border/heart_animated_2.png" id="1_sjmjm"]
+
+[node name="heartGui" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(18, 17)
+offset_right = 18.0
+offset_bottom = 17.0
+script = ExtResource("1_2swhh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("1_sjmjm")
+centered = false
+hframes = 5
+frame = 4

@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://c13p7k5jl748u"]
+[gd_scene load_steps=9 format=3 uid="uid://c13p7k5jl748u"]
 
 [ext_resource type="PackedScene" uid="uid://daqxjp7cto0pc" path="res://player/player.tscn" id="1_jhal8"]
+[ext_resource type="Script" path="res://scenes/world.gd" id="1_sb6l6"]
 [ext_resource type="Texture2D" uid="uid://bi7cihpw6nteq" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/full tilemap.png" id="2_qn1c3"]
 [ext_resource type="Script" path="res://scenes/follow cam.gd" id="3_x5hee"]
 [ext_resource type="PackedScene" uid="uid://cm43xdfewqlpf" path="res://enemies/monster.tscn" id="4_o5kh1"]
+[ext_resource type="PackedScene" uid="uid://c3we4pp4suod5" path="res://gui/heartsContainer.tscn" id="5_7pr1q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_00gck"]
 texture = ExtResource("2_qn1c3")
@@ -173,10 +175,12 @@ texture = ExtResource("2_qn1c3")
 5:7/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_r2wp8"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_00gck")
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_sb6l6")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_r2wp8")
@@ -193,10 +197,17 @@ layer_1/tile_data = PackedInt32Array(2228265, 327680, 0, 524346, 458752, 0, 1245
 
 [node name="Player" parent="TileMap" instance=ExtResource("1_jhal8")]
 position = Vector2(233, 145)
+knockbackPower = 5000
 
 [node name="follow cam" type="Camera2D" parent="TileMap/Player" node_paths=PackedStringArray("tilemap")]
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 script = ExtResource("3_x5hee")
 tilemap = NodePath("../..")
 
 [node name="monster" parent="TileMap" instance=ExtResource("4_o5kh1")]
 position = Vector2(295, 344)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="heartsContainer" parent="CanvasLayer" instance=ExtResource("5_7pr1q")]
