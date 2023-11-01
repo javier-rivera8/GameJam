@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://daqxjp7cto0pc"]
+[gd_scene load_steps=13 format=3 uid="uid://daqxjp7cto0pc"]
 
 [ext_resource type="Texture2D" uid="uid://ba3ctuiut4adk" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/heroes/knight/knight_run_spritesheet.png" id="1_h3ybu"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_vs7hs"]
+[ext_resource type="Resource" uid="uid://beqn0ck4hurnb" path="res://inventory/playerInventory.tres" id="2_e42ya"]
 
 [sub_resource type="Animation" id="Animation_p1upm"]
 length = 0.001
@@ -96,11 +97,11 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w88dx"]
-size = Vector2(27, 15)
+size = Vector2(9, 5.5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_35nb6"]
-radius = 14.0
-height = 42.0
+radius = 5.0
+height = 16.0
 
 [sub_resource type="Animation" id="Animation_0mwv2"]
 resource_name = "hurtBlink"
@@ -144,10 +145,10 @@ _data = {
 texture_filter = 1
 script = ExtResource("1_vs7hs")
 speed = 100
+inventory = ExtResource("2_e42ya")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 clip_children = 2
-scale = Vector2(3, 3)
 texture = ExtResource("1_h3ybu")
 flip_h = true
 hframes = 6
@@ -165,14 +166,14 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 12.5)
+position = Vector2(0.5, 4.25)
 shape = SubResource("RectangleShape2D_w88dx")
 
 [node name="hurtBox" type="Area2D" parent="."]
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtBox"]
-position = Vector2(2, 0)
+position = Vector2(1, 0)
 shape = SubResource("CapsuleShape2D_35nb6")
 
 [node name="Effects" type="AnimationPlayer" parent="."]
