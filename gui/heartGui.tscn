@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4fputwcb61em"]
 
 [ext_resource type="Script" path="res://gui/heartGui.gd" id="1_2swhh"]
-[ext_resource type="Texture2D" uid="uid://bubx0ikn6toth" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/ui (new)/Hearts/PNG/animated/border/heart_animated_2.png" id="1_sjmjm"]
+[ext_resource type="Texture2D" uid="uid://cqcnppd1swghq" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/ui (new)/Hearts/PNG/animated/border/heart_animated_2(blue).png" id="2_x3hk0"]
 
 [node name="heartGui" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
@@ -15,7 +15,7 @@ script = ExtResource("1_2swhh")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-2, 2)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("1_sjmjm")
+texture = ExtResource("2_x3hk0")
 centered = false
 hframes = 5
 frame = 4
