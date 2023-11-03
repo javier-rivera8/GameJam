@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ba3ctuiut4adk" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/heroes/knight/knight_run_spritesheet.png" id="1_h3ybu"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_vs7hs"]
 [ext_resource type="Resource" uid="uid://beqn0ck4hurnb" path="res://inventory/playerInventory.tres" id="2_e42ya"]
-[ext_resource type="PackedScene" uid="uid://bs7t8u0htoik1" path="res://player/sword2.tscn" id="4_thwgd"]
+[ext_resource type="PackedScene" uid="uid://dfnpprvqxjfj" path="res://player/sword2.tscn" id="4_thwgd"]
 
 [sub_resource type="Animation" id="Animation_p1upm"]
 length = 0.001
