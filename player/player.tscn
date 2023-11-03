@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://daqxjp7cto0pc"]
+[gd_scene load_steps=14 format=3 uid="uid://daqxjp7cto0pc"]
 
 [ext_resource type="Texture2D" uid="uid://ba3ctuiut4adk" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/heroes/knight/knight_run_spritesheet.png" id="1_h3ybu"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_vs7hs"]
 [ext_resource type="Resource" uid="uid://beqn0ck4hurnb" path="res://inventory/playerInventory.tres" id="2_e42ya"]
+[ext_resource type="PackedScene" uid="uid://bs7t8u0htoik1" path="res://player/sword2.tscn" id="4_thwgd"]
 
 [sub_resource type="Animation" id="Animation_p1upm"]
 length = 0.001
@@ -183,5 +184,33 @@ libraries = {
 
 [node name="hurtTimer" type="Timer" parent="."]
 
+[node name="weapon" type="Node2D" parent="."]
+visible = false
+
+[node name="Area2D" parent="weapon" instance=ExtResource("4_thwgd")]
+visible = false
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(-1000, 0)
+
+[node name="Deathsound" type="AudioStreamPlayer" parent="."]
+
+[node name="Shootsound" type="AudioStreamPlayer" parent="."]
+
+[node name="Flash" type="Sprite2D" parent="."]
+
+[node name="Timer" type="Timer" parent="Flash"]
+wait_time = 0.05
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="area_entered" from="hurtBox" to="." method="_on_hurt_box_area_entered"]
 [connection signal="area_exited" from="hurtBox" to="." method="_on_hurt_box_area_exited"]
+[connection signal="timeout" from="Flash/Timer" to="Flash" method="hide"]
