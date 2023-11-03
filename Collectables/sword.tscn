@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://ds0yp5cjps6y3" path="res://Collectables/collectable.tscn" id="1_kwdmn"]
 [ext_resource type="Script" path="res://Collectables/sword.gd" id="2_7cdcf"]
-[ext_resource type="Texture2D" uid="uid://dxlvft731lnim" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/heroes/knight/weapon_sword_1.png" id="2_hmr10"]
 [ext_resource type="Resource" uid="uid://bma8duty2ml21" path="res://inventory/items/sword.tres" id="3_s1krt"]
+[ext_resource type="Texture2D" uid="uid://flmuo5hl2eui" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/electric_batton.png" id="4_322sn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5dx0u"]
 resource_local_to_scene = true
@@ -38,7 +38,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [-0.837758, 5.51524]
+"values": [-0.785398, 5.49779]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uk111"]
@@ -58,7 +58,7 @@ shape = SubResource("RectangleShape2D_5dx0u")
 
 [node name="Sprite2D" parent="." index="1"]
 rotation = -0.837758
-texture = ExtResource("2_hmr10")
+texture = ExtResource("4_322sn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 libraries = {
