@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2ml2sf8h5hj8"]
+
+[ext_resource type="Script" path="res://Main Menu.gd" id="1_12425"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_12425")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 95.0
+offset_right = 256.0
+offset_bottom = 196.0
+scale = Vector2(0.4, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="startgame" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="quitgame" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit Game"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/startgame" to="." method="_on_startgame_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/quitgame" to="." method="_on_quitgame_pressed"]
