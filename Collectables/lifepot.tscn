@@ -1,20 +1,22 @@
 [gd_scene load_steps=5 format=3 uid="uid://dyn5mbaec2vx6"]
 
 [ext_resource type="PackedScene" uid="uid://ds0yp5cjps6y3" path="res://Collectables/collectable.tscn" id="1_j20vf"]
-[ext_resource type="Texture2D" uid="uid://dvfe0ct32h5tm" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/props_itens/potion_red.png" id="2_b8pm0"]
 [ext_resource type="Resource" uid="uid://qrqixux1jvfp" path="res://inventory/items/lifepot.tres" id="2_f6l14"]
+[ext_resource type="Texture2D" uid="uid://b1biflxufjg8a" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/props_itens/medkit.png" id="3_6cwao"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8evgn"]
 resource_local_to_scene = true
-size = Vector2(7, 10)
+size = Vector2(7, 6.5)
 
 [node name="Lifepot" instance=ExtResource("1_j20vf")]
 scale = Vector2(2, 2)
 itemRes = ExtResource("2_f6l14")
 
 [node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(-0.5, -1)
+position = Vector2(-0.5, 0.75)
 shape = SubResource("RectangleShape2D_8evgn")
 
 [node name="Sprite2D" parent="." index="1"]
-texture = ExtResource("2_b8pm0")
+position = Vector2(-0.5, 0)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_6cwao")

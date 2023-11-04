@@ -1,77 +1,49 @@
-[gd_scene load_steps=19 format=3 uid="uid://cm43xdfewqlpf"]
+[gd_scene load_steps=21 format=3 uid="uid://cm43xdfewqlpf"]
 
 [ext_resource type="Script" path="res://enemies/monster.gd" id="1_0keml"]
-[ext_resource type="Texture2D" uid="uid://blornseq12pi" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/goblin/goblin_run_spritesheet2.png" id="1_tvrka"]
-[ext_resource type="Texture2D" uid="uid://gdhoux0ps7om" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/goblin/goblin_run_spritesheet.png" id="2_biyri"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s4uen"]
-atlas = ExtResource("1_tvrka")
-region = Rect2(80, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g4e4d"]
-atlas = ExtResource("1_tvrka")
-region = Rect2(64, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vdklv"]
-atlas = ExtResource("1_tvrka")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7qya7"]
-atlas = ExtResource("1_tvrka")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ci2l1"]
-atlas = ExtResource("1_tvrka")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jb5ks"]
-atlas = ExtResource("1_tvrka")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g2vys"]
-atlas = ExtResource("2_biyri")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bry1t"]
-atlas = ExtResource("2_biyri")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_55dni"]
-atlas = ExtResource("2_biyri")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ygl1t"]
-atlas = ExtResource("2_biyri")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hoyb3"]
-atlas = ExtResource("2_biyri")
-region = Rect2(64, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_567i4"]
-atlas = ExtResource("2_biyri")
-region = Rect2(80, 0, 16, 16)
+[ext_resource type="Texture2D" uid="uid://6k7rg7kcp7th" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/1.png" id="2_ojh5a"]
+[ext_resource type="Texture2D" uid="uid://c4x2vmn1cdsxl" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/2.png" id="3_7rfy0"]
+[ext_resource type="Texture2D" uid="uid://b5ougkxh8prge" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/3.png" id="4_wdna6"]
+[ext_resource type="Texture2D" uid="uid://8dqygebjxtv" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/4.png" id="5_nuoyy"]
+[ext_resource type="Texture2D" uid="uid://botysfqd2wfeb" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/5.png" id="6_psplk"]
+[ext_resource type="Texture2D" uid="uid://doo2erbk2lj6v" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/6.png" id="7_1jqov"]
+[ext_resource type="Texture2D" uid="uid://p8fh7c71bufe" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/7.png" id="8_vs2d0"]
+[ext_resource type="Texture2D" uid="uid://dsdo8ss257h5n" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/8.png" id="9_on6yk"]
+[ext_resource type="Texture2D" uid="uid://mf00kcbtvd5d" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/Pico/1.png" id="10_5g0w7"]
+[ext_resource type="Texture2D" uid="uid://diek3t7c2yo43" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/Pico/2.png" id="11_543f2"]
+[ext_resource type="Texture2D" uid="uid://4tse4ugxwrbb" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/Pico/3.png" id="12_erxfr"]
+[ext_resource type="Texture2D" uid="uid://cd8vin86xad0" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/Pico/4.png" id="13_531tx"]
+[ext_resource type="Texture2D" uid="uid://sn0353msbpec" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/Pico/5.png" id="14_oe02v"]
+[ext_resource type="Texture2D" uid="uid://b80kx4y5iwm6b" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/Pico/6.png" id="15_ht65t"]
+[ext_resource type="Texture2D" uid="uid://cl8dhta7texmt" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/Pico/7.png" id="16_aiejj"]
+[ext_resource type="Texture2D" uid="uid://je4kvyi3dyqw" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/Pico/8.png" id="17_0o16d"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hpnxr"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_s4uen")
+"texture": ExtResource("2_ojh5a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g4e4d")
+"texture": ExtResource("3_7rfy0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vdklv")
+"texture": ExtResource("4_wdna6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7qya7")
+"texture": ExtResource("5_nuoyy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ci2l1")
+"texture": ExtResource("6_psplk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jb5ks")
+"texture": ExtResource("7_1jqov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vs2d0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_on6yk")
 }],
 "loop": true,
 "name": &"walkLeft",
@@ -79,22 +51,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g2vys")
+"texture": ExtResource("10_5g0w7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bry1t")
+"texture": ExtResource("11_543f2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_55dni")
+"texture": ExtResource("12_erxfr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ygl1t")
+"texture": ExtResource("13_531tx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hoyb3")
+"texture": ExtResource("14_oe02v")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_567i4")
+"texture": ExtResource("15_ht65t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_aiejj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_0o16d")
 }],
 "loop": true,
 "name": &"walkRight",
@@ -121,6 +99,7 @@ script = ExtResource("1_0keml")
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_hpnxr")
 animation = &"walkRight"
+frame_progress = 0.849442
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -9)
