@@ -7,6 +7,7 @@ signal healthChanged
 @onready var effects = $Effects
 @onready var hurtBox = $hurtBox
 @onready var hurtTimer = $hurtTimer
+@onready var label = $Label
 
 @export var maxHealth = 3
 @onready var currentHealth: int = maxHealth
@@ -69,6 +70,9 @@ func hurtByEnemy(area):
 func _on_hurt_box_area_entered(area):
 	if area.has_method("collect"):
 		area.collect(inventory)
+	if area.has_method("enable"):
+		area.enable()
+		label.visible = true
 		
 
 func knockback(enemyVelocity: Vector2):
@@ -78,4 +82,6 @@ func knockback(enemyVelocity: Vector2):
 
 
 func _on_hurt_box_area_exited(area):
-	pass
+	if area.has_method("disable"):
+		area.disable()
+		label.visible = false
