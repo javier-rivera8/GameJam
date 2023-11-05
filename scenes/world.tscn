@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cm43xdfewqlpf" path="res://enemies/monster.tscn" id="4_o5kh1"]
 [ext_resource type="PackedScene" uid="uid://c3we4pp4suod5" path="res://gui/heartsContainer.tscn" id="5_7pr1q"]
 [ext_resource type="Texture2D" uid="uid://cjcewafkqlnrx" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/tiles/Space station._32_2 (1).png" id="5_62fhu"]
-[ext_resource type="PackedScene" uid="uid://ro0f6xixk8le" path="res://Collectables/key.tscn" id="5_afb0e"]
+[ext_resource type="PackedScene" path="res://Collectables/key.tscn" id="5_afb0e"]
 [ext_resource type="Script" path="res://gui/CanvasLayer.gd" id="8_00h76"]
 [ext_resource type="PackedScene" uid="uid://ct6ia2jkpccvk" path="res://gui/inventory_gui.tscn" id="9_q37d0"]
 [ext_resource type="PackedScene" uid="uid://dlyly7g8jy0j8" path="res://scenes/mirror.tscn" id="12_c41g3"]
