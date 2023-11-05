@@ -13,6 +13,9 @@ signal healthChanged
 @onready var enemy = $"../monster"
 @onready var enemy2 = $"../monster2"
 @onready var enemy3 = $"../monster3"
+@onready var tilemap = $".."
+var canAttack: bool = false
+var kills: int = 0
 
 @export var maxHealth = 3
 @onready var currentHealth: int = maxHealth
@@ -36,6 +39,8 @@ func handleInput():
 		attack()
 
 func attack():
+	if canAttack == false:
+		return
 	animations.play("attack" + lastAnimationDirection)
 	isAttacking = true
 	weapon.visible = true
@@ -75,8 +80,8 @@ func _physics_process(delta):
 
 func hurtByEnemy(area):
 	currentHealth -= 1
-	if currentHealth < 0:
-		currentHealth = maxHealth
+	if currentHealth <= 0:
+		get_tree().change_scene_to_file("res://menus/main_menu.tscn")
 		
 	healthChanged.emit(currentHealth)
 	isHurt = true
@@ -104,6 +109,11 @@ func _on_hurt_box_area_entered(area):
 		enemy.follow()
 		enemy2.follow()
 		enemy3.follow()
+	if area.has_method("hasWeapon"):
+		area.hasWeapon()
+		canAttack = true
+	if area.has_method("finishGame"):
+		area.finishGame()
 		
 
 func knockback(enemyVelocity: Vector2):
@@ -119,3 +129,7 @@ func _on_hurt_box_area_exited(area):
 	if area.has_method("disableDoor"):
 		area.disableDoor()
 		label.visible = false
+
+func final():
+	if kills == 3:
+		tilemap.set_layer_enabled(7, false)

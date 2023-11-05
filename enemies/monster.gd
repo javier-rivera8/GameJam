@@ -6,11 +6,16 @@ extends CharacterBody2D
 
 @onready var nav_agent :=  $NavigationAgent2D as NavigationAgent2D
 @onready var animations = $AnimatedSprite2D
+@onready var hitBox = $Area2D
+
+@export var health = 3
 
 var animate: bool = false
 
 var startPosition
 var endPosition
+
+var isDead: bool = false
 
 func _ready():
 	startPosition = position
@@ -38,6 +43,7 @@ func updateAnimation():
 	animations.play(animationString)
 
 func _physics_process(_delta: float) -> void:
+	if isDead: return
 	var dir = to_local(nav_agent.get_next_path_position()).normalized()
 	velocity = dir * speed
 	move_and_slide()
@@ -53,3 +59,10 @@ func _on_timer_timeout():
 func follow():
 	speed = 75
 	animate = true
+
+
+func _on_area_2d_area_entered(area):
+	if area == hitBox: return
+	queue_free()
+	player.kills += 1
+	player.final()
