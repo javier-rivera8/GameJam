@@ -350,6 +350,7 @@ libraries = {
 [node name="hurtTimer" type="Timer" parent="."]
 
 [node name="Weapon" type="Node2D" parent="."]
+visible = false
 position = Vector2(0, 8)
 rotation = 2.0944
 
