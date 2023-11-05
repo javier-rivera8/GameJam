@@ -7,7 +7,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5dx0u"]
 resource_local_to_scene = true
-size = Vector2(8, 17)
+size = Vector2(7, 13)
 
 [sub_resource type="Animation" id="Animation_qlb5q"]
 length = 0.001
@@ -53,10 +53,11 @@ script = ExtResource("2_7cdcf")
 itemRes = ExtResource("3_s1krt")
 
 [node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(0, 0.5)
+position = Vector2(0, -9.5)
 shape = SubResource("RectangleShape2D_5dx0u")
 
 [node name="Sprite2D" parent="." index="1"]
+position = Vector2(0, -7.5)
 rotation = -0.837758
 texture = ExtResource("4_tvtjm")
 

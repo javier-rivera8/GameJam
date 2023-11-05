@@ -8,6 +8,7 @@ signal healthChanged
 @onready var hurtBox = $hurtBox
 @onready var hurtTimer = $hurtTimer
 @onready var label = $Label
+@onready var weapon = $Weapon
 
 @export var maxHealth = 3
 @onready var currentHealth: int = maxHealth
@@ -16,7 +17,9 @@ signal healthChanged
 
 @export var inventory: Inventory
 
+var lastAnimationDirection: String = "Down"
 var isHurt: bool = false
+var isAttacking: bool = false
 
 func _ready():
 	effects.play("RESET")
@@ -25,15 +28,29 @@ func handleInput():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = moveDirection*speed
 
+	if Input.is_action_just_pressed("attack"):
+		attack()
+
+func attack():
+	animations.play("attack" + lastAnimationDirection)
+	isAttacking = true
+	weapon.visible = true
+	await animations.animation_finished
+	weapon.visible = false
+	isAttacking = false
+
 func updateAnimation():
+	if isAttacking:
+		return
+
 	if velocity.length() == 0:
 		animations.stop()
 	else:
 		var direction = "Right"
 		if velocity.x < 0: direction = "Left"
 
-	
-		animations.play("walk" + direction) 
+		animations.play("walk" + direction)
+		lastAnimationDirection = direction
 	
 func handleCollision():
 	for i in get_slide_collision_count():
