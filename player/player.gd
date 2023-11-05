@@ -14,6 +14,7 @@ signal healthChanged
 @onready var enemy2 = $"../monster2"
 @onready var enemy3 = $"../monster3"
 @onready var tilemap = $".."
+@onready var steps = $footsteps
 var canAttack: bool = false
 var kills: int = 0
 
@@ -54,6 +55,7 @@ func updateAnimation():
 
 	if velocity.length() == 0:
 		animations.stop()
+		steps.play()
 	else:
 		var direction = "Right"
 		if velocity.x < 0: direction = "Left"

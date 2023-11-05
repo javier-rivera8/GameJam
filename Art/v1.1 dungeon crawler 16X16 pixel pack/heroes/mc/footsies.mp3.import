@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctneee8wxnqde"
+path="res://.godot/imported/footsies.mp3-b424b8c74b40618a921d9d82aff08569.mp3str"
+
+[deps]
+
+source_file="res://Art/v1.1 dungeon crawler 16X16 pixel pack/heroes/mc/footsies.mp3"
+dest_files=["res://.godot/imported/footsies.mp3-b424b8c74b40618a921d9d82aff08569.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

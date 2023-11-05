@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://daqxjp7cto0pc"]
+[gd_scene load_steps=20 format=3 uid="uid://daqxjp7cto0pc"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_vs7hs"]
 [ext_resource type="Resource" uid="uid://beqn0ck4hurnb" path="res://inventory/playerInventory.tres" id="2_e42ya"]
 [ext_resource type="Texture2D" uid="uid://dxfu444cqsu4y" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/heroes/mc/mc_spritesheet.png" id="3_kdgad"]
 [ext_resource type="PackedScene" uid="uid://bnc0epdmihc05" path="res://Collectables/sword.tscn" id="4_6msge"]
+[ext_resource type="AudioStream" uid="uid://ctneee8wxnqde" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/heroes/mc/footsies.mp3" id="4_ypm61"]
 [ext_resource type="FontFile" uid="uid://b6j3x67qtl5nl" path="res://Art/Retro Gaming.ttf" id="5_jg256"]
 
 [sub_resource type="Animation" id="Animation_p1upm"]
@@ -355,6 +356,10 @@ libraries = {
 "": SubResource("AnimationLibrary_ahvho")
 }
 
+[node name="footsteps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ypm61")
+volume_db = -3.0
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.25)
 shape = SubResource("RectangleShape2D_w88dx")
@@ -384,10 +389,6 @@ script = null
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(-1000, 0)
-
-[node name="Deathsound" type="AudioStreamPlayer" parent="."]
-
-[node name="Shootsound" type="AudioStreamPlayer" parent="."]
 
 [node name="Flash" type="Sprite2D" parent="."]
 
