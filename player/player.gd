@@ -90,6 +90,9 @@ func _on_hurt_box_area_entered(area):
 	if area.has_method("enable"):
 		area.enable()
 		label.visible = true
+	if area.has_method("enableDoor"):
+		area.enableDoor()
+		label.visible = true
 		
 
 func knockback(enemyVelocity: Vector2):
@@ -101,4 +104,7 @@ func knockback(enemyVelocity: Vector2):
 func _on_hurt_box_area_exited(area):
 	if area.has_method("disable"):
 		area.disable()
+		label.visible = false
+	if area.has_method("disableDoor"):
+		area.disableDoor()
 		label.visible = false

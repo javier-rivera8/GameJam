@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://c13p7k5jl748u"]
+[gd_scene load_steps=64 format=3 uid="uid://c13p7k5jl748u"]
 
 [ext_resource type="PackedScene" uid="uid://daqxjp7cto0pc" path="res://player/player.tscn" id="1_jhal8"]
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_sb6l6"]
@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://ct6ia2jkpccvk" path="res://gui/inventory_gui.tscn" id="9_q37d0"]
 [ext_resource type="PackedScene" uid="uid://dlyly7g8jy0j8" path="res://scenes/mirror.tscn" id="12_c41g3"]
 [ext_resource type="Script" path="res://scenes/mirrorArea.gd" id="13_4ypfs"]
+[ext_resource type="PackedScene" uid="uid://cjew4jw6bphl8" path="res://scenes/password.tscn" id="13_nop77"]
+[ext_resource type="Script" path="res://scenes/downDoor.gd" id="15_hsuji"]
+[ext_resource type="Texture2D" uid="uid://ctijoxfdmcb30" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/props_itens/key_silver.png" id="16_n8x7n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_00gck"]
 texture = ExtResource("2_qn1c3")
@@ -5929,6 +5932,9 @@ sources/2 = SubResource("TileSetAtlasSource_kg7my")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xh6n1"]
 size = Vector2(41, 32.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7uwun"]
+size = Vector2(36, 62)
+
 [node name="World" type="Node2D"]
 script = ExtResource("1_sb6l6")
 
@@ -6022,6 +6028,10 @@ offset_bottom = -2.715
 grow_horizontal = 0
 grow_vertical = 0
 
+[node name="password" parent="CanvasLayer" instance=ExtResource("13_nop77")]
+visible = false
+size_flags_vertical = 4
+
 [node name="mirrorSprite" type="Sprite2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="mirrorSprite"]
@@ -6030,3 +6040,15 @@ script = ExtResource("13_4ypfs")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mirrorSprite/Area2D"]
 position = Vector2(208.5, 260.75)
 shape = SubResource("RectangleShape2D_xh6n1")
+
+[node name="downDoor" type="Area2D" parent="."]
+script = ExtResource("15_hsuji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="downDoor"]
+position = Vector2(69, 609)
+shape = SubResource("RectangleShape2D_7uwun")
+
+[node name="KeySilver" type="Sprite2D" parent="."]
+position = Vector2(176, 613)
+scale = Vector2(2, 2)
+texture = ExtResource("16_n8x7n")
