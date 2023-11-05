@@ -9,6 +9,10 @@ signal healthChanged
 @onready var hurtTimer = $hurtTimer
 @onready var label = $Label
 @onready var weapon = $Weapon
+@onready var key = $"../../keyArea"
+@onready var enemy = $"../monster"
+@onready var enemy2 = $"../monster2"
+@onready var enemy3 = $"../monster3"
 
 @export var maxHealth = 3
 @onready var currentHealth: int = maxHealth
@@ -93,6 +97,13 @@ func _on_hurt_box_area_entered(area):
 	if area.has_method("enableDoor"):
 		area.enableDoor()
 		label.visible = true
+	if area.has_method("gotKey"):
+		area.gotKey()
+	if area.has_method("openDoor") and key.hasKey:
+		area.openDoor()
+		enemy.follow()
+		enemy2.follow()
+		enemy3.follow()
 		
 
 func knockback(enemyVelocity: Vector2):

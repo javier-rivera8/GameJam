@@ -1,11 +1,13 @@
 extends CharacterBody2D
 
-@export var speed = 75
+@export var speed = 0
 @export var limit = 0.5
 @export var player: Node2D
 
 @onready var nav_agent :=  $NavigationAgent2D as NavigationAgent2D
 @onready var animations = $AnimatedSprite2D
+
+var animate: bool = false
 
 var startPosition
 var endPosition
@@ -27,6 +29,8 @@ func updateVelocity():
 	velocity = moveDirection.normalized()*speed 
 
 func updateAnimation():
+	if !animate:
+		return
 	var animationString = "walkRight"
 	if velocity.x < 0:
 		animationString = "walkLeft"
@@ -45,3 +49,7 @@ func makepath() -> void:
 
 func _on_timer_timeout():
 	makepath()
+
+func follow():
+	speed = 75
+	animate = true

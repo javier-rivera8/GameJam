@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://ro0f6xixk8le"]
+
+[ext_resource type="PackedScene" uid="uid://ds0yp5cjps6y3" path="res://Collectables/collectable.tscn" id="1_k2lnu"]
+[ext_resource type="Resource" uid="uid://b8lbs088s24f3" path="res://inventory/items/key.tres" id="2_5crw3"]
+[ext_resource type="Texture2D" uid="uid://ctijoxfdmcb30" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/props_itens/key_silver.png" id="2_mehwr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v77sy"]
+resource_local_to_scene = true
+size = Vector2(33, 18)
+
+[node name="Key" instance=ExtResource("1_k2lnu")]
+itemRes = ExtResource("2_5crw3")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(1.5, 1)
+shape = SubResource("RectangleShape2D_v77sy")
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(2, 2)
+texture = ExtResource("2_mehwr")

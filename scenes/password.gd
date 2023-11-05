@@ -1,6 +1,6 @@
 extends Control
 
-const PASSWORD = "123"
+const PASSWORD = "9785"
 
 @onready var label = $VBoxContainer/MarginContainer/Label
 @onready var tilemap = $"../../TileMap"
@@ -18,7 +18,7 @@ func close():
 	isOpen = false
 
 func key_press(digit):
-	if len(label.text) < 3:
+	if len(label.text) < 4:
 		label.text += str(digit)
 		
 

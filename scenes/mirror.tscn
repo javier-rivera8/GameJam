@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dlyly7g8jy0j8"]
 
 [ext_resource type="Script" path="res://scenes/mirror.gd" id="1_7gn2y"]
-[ext_resource type="Texture2D" uid="uid://bq0mq2tnc3tg3" path="res://Art/mirror.png" id="1_h21jp"]
+[ext_resource type="Texture2D" uid="uid://c6i4i6apnetd1" path="res://Art/mirrorRiddle2.png" id="2_wkjqf"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -31,5 +31,5 @@ offset_right = 197.0
 offset_bottom = 192.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_h21jp")
+texture = ExtResource("2_wkjqf")
 expand_mode = 2

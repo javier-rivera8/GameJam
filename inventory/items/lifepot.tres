@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://qrqixux1jvfp"]
 
 [ext_resource type="Script" path="res://inventory/inventoryItem.gd" id="1_k4aa6"]
-[ext_resource type="Texture2D" uid="uid://dvfe0ct32h5tm" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/props_itens/potion_red.png" id="2_uan7f"]
+[ext_resource type="Texture2D" uid="uid://b1biflxufjg8a" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/props_itens/medkit.png" id="2_wecxv"]
 
 [resource]
 script = ExtResource("1_k4aa6")
 name = "lifepot"
-texture = ExtResource("2_uan7f")
+texture = ExtResource("2_wecxv")
