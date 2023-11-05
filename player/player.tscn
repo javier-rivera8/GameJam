@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://daqxjp7cto0pc"]
 
-[ext_resource type="Texture2D" uid="uid://ba3ctuiut4adk" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/heroes/knight/knight_run_spritesheet.png" id="1_h3ybu"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_vs7hs"]
 [ext_resource type="Resource" uid="uid://beqn0ck4hurnb" path="res://inventory/playerInventory.tres" id="2_e42ya"]
+[ext_resource type="Texture2D" uid="uid://dxfu444cqsu4y" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/heroes/mc/mc_spritesheet.png" id="3_kdgad"]
 [ext_resource type="PackedScene" uid="uid://dfnpprvqxjfj" path="res://player/sword2.tscn" id="4_thwgd"]
 [ext_resource type="FontFile" uid="uid://b6j3x67qtl5nl" path="res://Art/Retro Gaming.ttf" id="5_jg256"]
 
@@ -47,7 +47,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 3, 2, 4, 5]
+"values": [0, 1, 2, 3, 4, 5]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -151,7 +151,7 @@ inventory = ExtResource("2_e42ya")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 clip_children = 2
-texture = ExtResource("1_h3ybu")
+texture = ExtResource("3_kdgad")
 flip_h = true
 hframes = 6
 
