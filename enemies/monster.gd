@@ -7,6 +7,7 @@ extends CharacterBody2D
 @onready var nav_agent :=  $NavigationAgent2D as NavigationAgent2D
 @onready var animations = $AnimatedSprite2D
 @onready var hitBox = $Area2D
+@onready var deathBird = $deathBird
 
 @export var health = 3
 
@@ -60,9 +61,9 @@ func follow():
 	speed = 75
 	animate = true
 
-
 func _on_area_2d_area_entered(area):
 	if area == hitBox: return
+	
 	queue_free()
 	player.kills += 1
 	player.final()

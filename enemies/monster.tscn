@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cm43xdfewqlpf"]
+[gd_scene load_steps=23 format=3 uid="uid://cm43xdfewqlpf"]
 
 [ext_resource type="Script" path="res://enemies/monster.gd" id="1_0keml"]
 [ext_resource type="Texture2D" uid="uid://6k7rg7kcp7th" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/1.png" id="2_ojh5a"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://b80kx4y5iwm6b" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/Pico/6.png" id="15_ht65t"]
 [ext_resource type="Texture2D" uid="uid://cl8dhta7texmt" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/Pico/7.png" id="16_aiejj"]
 [ext_resource type="Texture2D" uid="uid://je4kvyi3dyqw" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/enemies/Pico/8.png" id="17_0o16d"]
+[ext_resource type="AudioStream" uid="uid://b1d5ehiloyy3s" path="res://enemies/bird.mp3" id="18_a8vlc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hpnxr"]
 animations = [{
@@ -126,6 +127,9 @@ collision_mask = 4
 position = Vector2(0.5, -8)
 shape = SubResource("CircleShape2D_0fxyf")
 debug_color = Color(0.996078, 0, 0.156863, 0.419608)
+
+[node name="deathBird" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_a8vlc")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

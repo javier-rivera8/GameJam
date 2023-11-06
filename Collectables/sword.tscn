@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnc0epdmihc05"]
+[gd_scene load_steps=10 format=3 uid="uid://bnc0epdmihc05"]
 
 [ext_resource type="PackedScene" uid="uid://ds0yp5cjps6y3" path="res://Collectables/collectable.tscn" id="1_kwdmn"]
 [ext_resource type="Script" path="res://Collectables/sword.gd" id="2_7cdcf"]
 [ext_resource type="Resource" uid="uid://bma8duty2ml21" path="res://inventory/items/sword.tres" id="3_s1krt"]
 [ext_resource type="Texture2D" uid="uid://flmuo5hl2eui" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/electric_batton.png" id="4_tvtjm"]
+[ext_resource type="AudioStream" uid="uid://cf5ybi3psbyt6" path="res://Collectables/swing.mp3" id="5_n6h81"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5dx0u"]
 resource_local_to_scene = true
@@ -67,3 +68,6 @@ texture = ExtResource("4_tvtjm")
 libraries = {
 "": SubResource("AnimationLibrary_uk111")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("5_n6h81")

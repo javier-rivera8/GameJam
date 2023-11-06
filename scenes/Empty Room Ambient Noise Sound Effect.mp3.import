@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://br4dmgyhhf1er"
+path="res://.godot/imported/Empty Room Ambient Noise Sound Effect.mp3-9d18b4c6609c338f68fddc9846b68240.mp3str"
+
+[deps]
+
+source_file="res://scenes/Empty Room Ambient Noise Sound Effect.mp3"
+dest_files=["res://.godot/imported/Empty Room Ambient Noise Sound Effect.mp3-9d18b4c6609c338f68fddc9846b68240.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,6 +1,7 @@
 extends "res://Collectables/Collectable.gd"
 
 @onready var animations = $AnimationPlayer
+@onready var swing = $AudioStreamPlayer
 var weapon = false
 
 func collect(inventory: Inventory):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://daqxjp7cto0pc"]
+[gd_scene load_steps=22 format=3 uid="uid://daqxjp7cto0pc"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_vs7hs"]
 [ext_resource type="Resource" uid="uid://beqn0ck4hurnb" path="res://inventory/playerInventory.tres" id="2_e42ya"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bnc0epdmihc05" path="res://Collectables/sword.tscn" id="4_6msge"]
 [ext_resource type="AudioStream" uid="uid://ctneee8wxnqde" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/heroes/mc/footsies.mp3" id="4_ypm61"]
 [ext_resource type="FontFile" uid="uid://b6j3x67qtl5nl" path="res://Art/Retro Gaming.ttf" id="5_jg256"]
+[ext_resource type="AudioStream" uid="uid://cf5ybi3psbyt6" path="res://Collectables/swing.mp3" id="7_4yrb6"]
+[ext_resource type="AudioStream" uid="uid://b1d5ehiloyy3s" path="res://enemies/bird.mp3" id="8_o4ktk"]
 
 [sub_resource type="Animation" id="Animation_p1upm"]
 length = 0.001
@@ -423,6 +425,14 @@ theme_override_fonts/font = ExtResource("5_jg256")
 text = "Press E to toggle view"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_4yrb6")
+volume_db = -5.622
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_o4ktk")
+volume_db = -5.622
 
 [connection signal="area_entered" from="hurtBox" to="." method="_on_hurt_box_area_entered"]
 [connection signal="area_exited" from="hurtBox" to="." method="_on_hurt_box_area_exited"]

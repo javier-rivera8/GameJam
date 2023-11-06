@@ -15,6 +15,8 @@ signal healthChanged
 @onready var enemy3 = $"../monster3"
 @onready var tilemap = $".."
 @onready var steps = $footsteps
+@onready var swing = $AudioStreamPlayer
+@onready var birdD = $AudioStreamPlayer2
 var canAttack: bool = false
 var kills: int = 0
 
@@ -48,6 +50,8 @@ func attack():
 	await animations.animation_finished
 	weapon.visible = false
 	isAttacking = false
+	swing.play()
+	
 
 func updateAnimation():
 	if isAttacking:
@@ -134,5 +138,6 @@ func _on_hurt_box_area_exited(area):
 		label.visible = false
 
 func final():
+	birdD.play()
 	if kills == 3:
 		tilemap.set_layer_enabled(7, false)

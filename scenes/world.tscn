@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://c13p7k5jl748u"]
+[gd_scene load_steps=71 format=3 uid="uid://c13p7k5jl748u"]
 
 [ext_resource type="PackedScene" uid="uid://daqxjp7cto0pc" path="res://player/player.tscn" id="1_jhal8"]
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_sb6l6"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cm43xdfewqlpf" path="res://enemies/monster.tscn" id="4_o5kh1"]
 [ext_resource type="PackedScene" uid="uid://c3we4pp4suod5" path="res://gui/heartsContainer.tscn" id="5_7pr1q"]
 [ext_resource type="Texture2D" uid="uid://cjcewafkqlnrx" path="res://Art/v1.1 dungeon crawler 16X16 pixel pack/tiles/Space station._32_2 (1).png" id="5_62fhu"]
-[ext_resource type="PackedScene" path="res://Collectables/key.tscn" id="5_afb0e"]
+[ext_resource type="PackedScene" uid="uid://ro0f6xixk8le" path="res://Collectables/key.tscn" id="5_afb0e"]
 [ext_resource type="Script" path="res://gui/CanvasLayer.gd" id="8_00h76"]
 [ext_resource type="PackedScene" uid="uid://ct6ia2jkpccvk" path="res://gui/inventory_gui.tscn" id="9_q37d0"]
 [ext_resource type="PackedScene" uid="uid://dlyly7g8jy0j8" path="res://scenes/mirror.tscn" id="12_c41g3"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" path="res://scenes/keyArea.gd" id="17_v51vb"]
 [ext_resource type="Script" path="res://scenes/topDoor.gd" id="18_evgiu"]
 [ext_resource type="Script" path="res://scenes/finish.gd" id="19_6hqdd"]
+[ext_resource type="AudioStream" uid="uid://br4dmgyhhf1er" path="res://scenes/Empty Room Ambient Noise Sound Effect.mp3" id="20_tev6t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_00gck"]
 texture = ExtResource("2_qn1c3")
@@ -6010,7 +6011,6 @@ layer_7/tile_data = PackedInt32Array(917532, 196610, 20, 851996, 196610, 20, 786
 [node name="Player" parent="TileMap" instance=ExtResource("1_jhal8")]
 position = Vector2(299, 144)
 scale = Vector2(2, 2)
-maxHealth = 3
 knockbackPower = 5000
 
 [node name="follow cam" type="Camera2D" parent="TileMap/Player" node_paths=PackedStringArray("tilemap")]
@@ -6097,3 +6097,7 @@ script = ExtResource("19_6hqdd")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="finish"]
 position = Vector2(1187.75, 429.5)
 shape = SubResource("RectangleShape2D_70h1r")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_tev6t")
+autoplay = true
