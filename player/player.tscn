@@ -432,7 +432,7 @@ volume_db = -5.622
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_o4ktk")
-volume_db = -5.622
+volume_db = -7.496
 
 [connection signal="area_entered" from="hurtBox" to="." method="_on_hurt_box_area_entered"]
 [connection signal="area_exited" from="hurtBox" to="." method="_on_hurt_box_area_exited"]
