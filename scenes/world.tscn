@@ -6010,6 +6010,7 @@ layer_7/tile_data = PackedInt32Array(917532, 196610, 20, 851996, 196610, 20, 786
 [node name="Player" parent="TileMap" instance=ExtResource("1_jhal8")]
 position = Vector2(299, 144)
 scale = Vector2(2, 2)
+maxHealth = 3
 knockbackPower = 5000
 
 [node name="follow cam" type="Camera2D" parent="TileMap/Player" node_paths=PackedStringArray("tilemap")]

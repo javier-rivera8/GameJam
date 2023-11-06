@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://menus/options_menu.gd" id="1_k2k08"]
 [ext_resource type="Texture2D" uid="uid://bdl02nc582vmg" path="res://menus/options menu bg.png" id="2_jxk2c"]
 
-[node name="Main Menu" type="Control"]
+[node name="Options Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

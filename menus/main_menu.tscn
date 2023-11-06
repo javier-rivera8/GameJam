@@ -41,7 +41,7 @@ position = Vector2(184, 101)
 scale = Vector2(2.1, 2.1)
 texture = ExtResource("2_mfxad")
 hframes = 93
-frame = 73
+frame = 23
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Title Intro"
