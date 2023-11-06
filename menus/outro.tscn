@@ -65,6 +65,7 @@ libraries = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_sje5n")
+volume_db = -2.0
 autoplay = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

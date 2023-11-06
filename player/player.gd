@@ -111,6 +111,7 @@ func _on_hurt_box_area_entered(area):
 		enemy.follow()
 		enemy2.follow()
 		enemy3.follow()
+		key.hasKey = false
 	if area.has_method("hasWeapon"):
 		area.hasWeapon()
 		canAttack = true

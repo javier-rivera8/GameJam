@@ -1,6 +1,6 @@
 extends Control
 
-const PASSWORD = "9785"
+const PASSWORD = "7777"
 
 @onready var label = $VBoxContainer/MarginContainer/Label
 @onready var tilemap = $"../../TileMap"
